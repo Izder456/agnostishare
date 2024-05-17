@@ -1,0 +1,11 @@
+Placeholder README:
+
+example use:
+
+in case you use "spotify" but a friend uses "apple music", you can
+still share songs/albums/artists with your friend using said service
+
+you can paste a music link from a supported streaming service and
+it would return a webpage link containing equivalent links on other
+services to share with your friend, becoming a fully "Agnostic"
+music link share service.

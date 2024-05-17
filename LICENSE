@@ -1,0 +1,53 @@
+HS License
+
+Copyright (c) 2024, izzy Meyer <izder456@disroot.org>
+Licensed materials - program property authors shown above.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Redistributions of modified source code must append a copyright notice in
+   the form of 'Copyright <YEAR> <NAME>' to each modified source file's
+   copyright notice, and the standalone license file if one exists.
+
+4. This software is not used for any commercial use whatsoever: this program's
+   source and object code is intended for personal use only. Any use that may
+   incur a monetary gain (including through barter or trade) is prohibited,
+   and such uses will require a license. Contact the author of this software
+   to arrange licensing.
+
+5. This software is not permitted to be used in any case where life or limb
+   may be at risk. This includes real-time control systems that may have
+   safety compliance requirements, medical equipment, communications networks
+   that handle traffic in emergencies, et cetera. No assurance of reliability
+   is made.
+
+6. Non-commercial modification of the source code is permitted. Contributions
+   are welcome.
+
+A "redistribution" can be constituted as any version of the source code
+that is intended to comprise some other derivative work of this code. A
+fork created for the purpose of contributing to any version of the source
+does not constitute a truly "derivative work" and does not require listing.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. COMMERCIAL
+USE REGARDLESS OF CLAUSE 4 OF THIS LICENSE ALSO INCLUDES NO SUCH LIABILITY. 
+NO ORGANIZATION USING THIS SOFTWARE FOR COMMERCIAL MEANS MAY HOLD THE AUTHORS
+ACCOUNTABLE FOR ANY DAMAGES AS PER LISTED ABOVE.

@@ -4,7 +4,7 @@ const result = document.getElementById('result');
 
 function extractIdFromUrl(url) {
     let id;
-
+    
     if (url.includes('spotify.com')) {
         const pathParts = new URL(url).pathname.split('/');
         if (pathParts.length > 2 && ['track', 'album', 'artist'].includes(pathParts[1])) {
@@ -25,13 +25,14 @@ function extractIdFromUrl(url) {
 
 function convertLink(link) {
     let convertedLinks = {};
+    let platform = "";
 
     if (link.includes('spotify.com')) {
-        let platform = 'Spotify';
+        platform = 'Spotify';
     } else if (link.includes('youtube.com')) {
-        let platform = 'YouTube';
+        platform = 'YouTube';
     } else if (link.includes('soundcloud.com')) {
-        let platform = 'SoundCloud';
+        platform = 'SoundCloud';
     } else {
         return { error: 'Unsupported platform' };
     }
@@ -44,36 +45,38 @@ function convertLink(link) {
             convertedLinks['SoundCloud'] = `https://soundcloud.com/user-${id}`;
             break;
         case 'YouTube':
-            convertedLinks['Spotify'] = `https://open.spotify.com/track/${id}`;
-            convertedLinks['SoundCloud'] = `https://soundcloud.com/tracks/${id}`;
+        convertedLinks['Spotify'] = `https://open.spotify.com/track/${id}`;
+        convertedLinks['SoundCloud'] = `https://soundcloud.com/tracks/${id}`;
             break;
         case 'SoundCloud':
             convertedLinks['Spotify'] = `https://open.spotify.com/artist/${id}`;
             convertedLinks['YouTube'] = `https://www.youtube.com/channel/${id}`;
             break;
-    }
+        default:
+            return { error: 'Failed to Convert Link'};
+}
 
-    return convertedLinks;
+return convertedLinks;
 }
 
 function displayResult(links) {
     if (links.error) {
-	result.innerHTML = `<p>${links.error}</p>`;
+        result.innerHTML = `<p>${links.error}</p>`;
     } else {
-	let resultHTML = '';
-	for (const platform in links) {
-	    resultHTML += `<p><strong>${platform}:</strong> ${links[platform]}</p>`;
-	}
-	result.innerHTML = resultHTML;
+        let resultHTML = '';
+        for (const platform in links) {
+            resultHTML += `<p><strong>${platform}:</strong> ${links[platform]}</p>`;
+        }
+        result.innerHTML = resultHTML;
     }
 }
 
 convertBtn.addEventListener('click', () => {
     const link = musicLink.value.trim();
     if (link) {
-	const convertedLinks = convertLink(link);
-	displayResult(convertedLinks);
+        const convertedLinks = convertLink(link);
+        displayResult(convertedLinks);
     } else {
-	result.innerHTML = '<p>Please enter a valid music link.</p>';
+        result.innerHTML = '<p>Please enter a valid music link.</p>';
     }
 });

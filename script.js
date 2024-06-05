@@ -29,7 +29,7 @@ function youtubeLink(id) {
 }
 
 function soundcloudLink(id) {
-    return `https://soundcloud.com/user-${id}`;
+    return `https://soundcloud.com/user/track/${id}`;
 }
 
 function spotifyLink(id) {

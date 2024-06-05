@@ -38,7 +38,8 @@ function spotifyLink(id) {
 
 function convertLink(link) {
     let id = idFromUrl(link);
-
+    let convertedLinks = {};
+    
     if (link.includes('spotify.com')) {
         convertedLinks['YouTube'] = youtubeLink(id);
         convertedLinks['SoundCloud'] = soundcloudLink(id);

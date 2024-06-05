@@ -1,6 +1,6 @@
 const result = document.getElementById('result');
 
-function extractIdFromUrl(url) {
+function idFromUrl(url) {
     if (url.includes('spotify.com')) {
         const pathParts = new URL(url).pathname.split('/');
         
@@ -24,22 +24,34 @@ function extractIdFromUrl(url) {
     }
 }
 
+function youtubeLink(id) {
+    return `https://www.youtube.com/watch?v=${id}`;
+}
+
+function soundcloudLink(id) {
+    return `https://soundcloud.com/user-${id}`;
+}
+
+function spotifyLink(id) {
+    return `https://open.spotify.com/track/${id}`;
+}
+
 function convertLink(link) {
-    let id = extractIdFromUrl(link);
+    let id = idFromUrl(link);
 
     if (link.includes('spotify.com')) {
-        convertedLinks['YouTube'] = `https://www.youtube.com/watch?v=${id}`;
-        convertedLinks['SoundCloud'] = `https://soundcloud.com/user-${id}`;
+        convertedLinks['YouTube'] = youtubeLink(id);
+        convertedLinks['SoundCloud'] = soundcloudLink(id);
         
         return convertedLinks;
     } else if (link.includes('youtube.com')) {
-        convertedLinks['Spotify'] = `https://open.spotify.com/track/${id}`;
-        convertedLinks['SoundCloud'] = `https://soundcloud.com/tracks/${id}`;
+        convertedLinks['Spotify'] = spotifyLink(id);
+        convertedLinks['SoundCloud'] = soundcloudLink(id);
         
         return convertedLinks;
     } else if (link.includes('soundcloud.com')) {
-        convertedLinks['Spotify'] = `https://open.spotify.com/artist/${id}`;
-        convertedLinks['YouTube'] = `https://www.youtube.com/channel/${id}`;
+        convertedLinks['Spotify'] = spotifyLink(id);
+        convertedLinks['YouTube'] = youtubeLink(id);
         
         return convertedLinks;
     } else {
